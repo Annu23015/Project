@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registretion form</title>
+        <style>
+            *{
+                outline: none;
+                padding: 0px;
+                margin: 0px;
+            }
+             main
+             {
+                width: 100%;
+                height: 100vh;
+               /* background-color: #b36b86; */
+               background-image: url("loginBack.jpg");
+               background-repeat: no-repeat;
+               background-size: 100% 100vh;
+               /* padding-top: 20px; */
+             }
+             #x
+             {  
+                
+                height:500px;
+                width:800px;
+                margin:auto;
+               
+                /* background-color: #8d6170; */
+                padding-top: 40px;
+                border-radius: 20px;
+             }
+             #y
+             {
+                color: white;
+                padding-top: 20px;
+                font-size: 25px;
+        
+             }
+            input[type=text],input[type=email],input[type=password]
+            {
+                width: 250px;
+                padding: 10px;
+                margin: 15px 0 15px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+                border-radius: 20px;
+
+            }
+
+            .registerbutton:hover
+            {
+              opacity: 1;
+            }
+            .registerbutton
+            {
+                background-color: white;
+                color:  #a22b56;
+                padding: 10px 10px;
+                margin-left: 140px;
+                border: none;
+                cursor: pointer;
+                width: 65%;
+                opacity: 0.9;
+                border-radius: 5px;
+                font-size: 25px;
+
+            }
+            #x h1{
+                color: white;
+                text-align: center;
+                font-size: 40px;
+            }
+            #y{
+                text-align: center;
+                /* border: 5px solid black; */
+                margin: auto;
+            }
+            #d1{
+                display:none;
+                color: rgb(201, 69, 69);
+                text-align: center;
+                font-size: 25px;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <main>
+          <div id="x">
+            <h1>Registration Form</h1>
+            <table id="y">
+                <tr>
+                   <td id="z"> <label>Name:</label></td>
+                   <td> <input type="text" placeholder="enter name"  id="t1"/></td>
+                </tr>
+               
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td><input type="email" placeholder="enter mail"  id="t2" onblur="onb(this)"/></td>
+                </tr>
+                <tr>    
+                    <td><label>Password:</label></td>
+                    <td><input type="password" placeholder="enter password" onblur="onbl(this)" id="t3"/></td>
+                </tr> 
+               
+                <tr>  
+                    <td><label>Phone Number:</label></td> 
+                     <td><input type="text" placeholder="enter phone number"  id="t4"/></td>
+                </tr> 
+                <tr>
+
+                   <td> <label>Gender:</label></td>
+                    <td  id="t5">Male:<input type="radio" value="Male" name="gen"/>
+                        Female:<input type="radio" value="FeMale" name="gen"/>
+                        Other:<input type="radio" value="Other" name="gen"/></td>
+                </tr> 
+                <tr>  
+                    <td><label>About:</label></td> 
+                     <td><input type="text" placeholder="student or trainee" size="80"  id="t6" /></td>
+                </tr> 
+                
+            </table>
+            <div id="d1">fill all the required field*</div>
+            <input type="button" class="registerbutton" onclick="reg()" value="Register"/> 
+
+          </div>
+        </main>
+          <script>
+            let t1=document.getElementById("t1")
+            
+            let t2=document.getElementById("t2")
+            
+            let t3=document.getElementById("t3")
+            
+            let t4=document.getElementById("t4")
+            
+            let d1=document.getElementById("d1")
+            
+            let t6=document.getElementById("t6")
+            function onb(e)
+            {
+                if((/^[a-z0-9_]+[.]?[a-z0-9_]+[@][a-z]+[.](com|co.in|in|asia|org)$/i).test(e.value))
+                {
+                    e.style.border="2px solid green"
+                }
+                else
+                {
+                    e.style.border="2px solid red"
+
+                }
+            }
+            function onbl(e)
+            {
+                if(e.value.length>8 && (/^[A-Z]/).test(e.value)&& (/[0-9]+/).test(e.value)&& (/[a-z]+/).test(e.value)&&(/[@#$%&*!]+/).test(e.value))
+                {
+                    e.style.border="2px solid green"
+                
+                }
+                else
+                {
+                    e.style.border="2px solid red"
+
+                }
+            }
+           
+            function reg()
+            {          
+            if(t1.value!="" && t2.value!="" && t3.value!="" && t4.value!="" && t6.value!="" && t3.style.border=="2px solid green" && t2.style.border=="2px solid green")
+            {
+                console.log("annu")
+                let t11=t1.value
+                let t22=t2.value
+                let t33=t3.value
+                let t44=t4.value
+                let t66=t6.value
+                // let t11=t1.value
+                localStorage.setItem("name",t11)
+                localStorage.setItem("email",t22)
+                localStorage.setItem("pass",t33)
+                localStorage.setItem("phno",t44)
+                localStorage.setItem("about",t66)
+                window.location='./pro1.html'
+                
+            }
+            else{
+                d1.style.display="block"
+                // let nr=document.createElement("li")
+                // nr.innerHTML="fill all the required field*"
+                // nr.style.color="red"
+                // d1.append(nr)
+            }
+
+          
+        }
+
+          </script>
+    </body>
+</html>

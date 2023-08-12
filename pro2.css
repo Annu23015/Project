@@ -1,0 +1,203 @@
+*{
+    outline: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+}
+.main{
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(to left,#43455c,#a280b9,#3c3f58,#2e3047);
+    background-size: 100% 100vh;
+    
+}
+.down .dh1{
+    width: 100%;
+    height:100px;
+     position: relative; 
+    /* border:2px solid black; */
+    overflow: hidden;
+}
+.down h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color:white;
+    padding-top: 20px;
+     position:absolute; 
+    
+    animation: demo 5s infinite;
+}
+@keyframes demo{
+    0%{
+        left:0px;
+    }
+    50%{
+        left:87%
+    }
+    100%{
+        left:0%
+    }
+}
+
+.card{
+    width:60%;
+    height: 60vh;
+
+    /* height: 700px; */
+    padding: 30px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(238, 232, 232);
+    gap:10px;
+    border-radius: 20px;
+}
+.card .ele{
+    /* background-color: white; */
+    /* margin: 10px; */
+    width: 400px;
+    height: 100px;
+    text-align: center;
+     /* padding-left: 20px;  */
+     background-color:#794665;
+    color:white;
+    border-radius: 15px;
+    transition: all 2s;
+    
+   
+}
+.ele:hover
+{
+    scale: 120%;
+    transform:rotate(360deg);
+
+}
+
+
+.nav
+{
+    width: 100%;
+    height: 10vh;
+    background-color: #f0f3eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right,#d294af,#bbc4c5,#fdd8d6,#f9ddd2);
+}
+.navright
+{
+    width: 40%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.menu{
+    width:150px;
+    height: 20px;
+    /* background-color: #6497b1; */
+    border: 3px solid black;
+    font-size: medium;
+    background: transparent;
+     border-radius: 10px;
+     text-align: center;
+     padding: 10px 0px 10px;
+}
+.submenu{
+    background-color: #ac88c4;
+    line-height: 25px;
+    opacity: 0.9;
+    text-align: left;
+    border-radius: 10px;
+    display: none;
+}
+.submenu a{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    padding-left: 5px;
+
+}
+a:hover {
+    border-bottom: 2px solid white;
+}
+.menu:hover .submenu{
+    display: block;
+
+}
+
+
+
+
+
+
+.ref,.btn{
+     height: 40px;
+     width: 150px;
+     font-weight: bold;
+     border: 3px solid black;
+     border-radius: 10px;
+     font-size: medium;
+     color: rgb(13, 61, 61);
+     background: transparent;
+     transition: scale 400ms;
+}
+.btn:hover{
+    scale:120%;
+    background-color: #2e3047;
+    color: white;
+}
+option:hover{
+    scale:120%;
+}
+.ele .btn1{
+    /* background-color: #3ea325; */
+    width: 100px;
+    height: 40px;
+    border: 2px solid rgb(17, 16, 16);
+    background-color: linear-gredient(to left,#6497b1,b3cde0);
+    /* background: transparent; */
+    border-radius: 10px;
+    margin-top: 20px;
+    /* padding: 15px; */
+    font-size:15px;
+    transition: scale 200ms;
+
+}
+.btn1:hover{
+    scale:120%;
+    background-color:#794665 ;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.ele h3{
+    margin-top: 15px;
+}
+.lastbtn{
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    width: 150px;
+    height: 70px;
+    border: 2px solid black;
+    transition: scale 400ms;
+    border-radius: 20px;
+
+}
+.lastbtn:hover{
+    scale:150%;
+    background-color:#2b2031;
+    /* background-image: ; */
+    color:white;
+}
+.icon{
+    /* width: 50px;
+    height: 20px; */
+    font-weight: bolder;
+}
